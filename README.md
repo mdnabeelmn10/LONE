@@ -1,2 +1,2 @@
-# LONE
-Lone -  The Mental Health Companion
+# UNLONE
+UnLone -  The Mental Health Companion
