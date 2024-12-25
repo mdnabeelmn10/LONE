@@ -1,0 +1,57 @@
+{% extends 'users/base.html' %}
+
+{% load static %}
+
+{% block title %}About Us - Unlone{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/about.css' %}">
+{% endblock %}
+
+{% block content %}
+<section id="about">
+    <div class="about-container">
+        <h1>About Unlone</h1>
+        <p>At <strong>Unlone</strong>, we are committed to fostering mental well-being and breaking the stigma surrounding mental health. Our platform is designed to provide users with personalized support, actionable resources, and access to tools that promote emotional resilience and balance.</p>
+    </div>
+
+    <div class="sub">
+
+    <div class="mission">
+        <h2>Our Mission</h2>
+        <p>Our mission is to create a safe, judgment-free space where users can explore their mental wellness, connect with empathetic AI companions, and access tailored resources. Whether you're facing mild stress, seeking support for more severe challenges, or simply want to improve your overall mental health, Unlone is here to guide you every step of the way.</p>
+    </div>
+
+    <div class="vision">
+        <h2>Our Vision</h2>
+        <p>We envision a world where mental health support is accessible, inclusive, and empowering for all. By leveraging technology and empathy, Unlone seeks to make a meaningful difference in people's lives.</p>
+    </div>
+
+    <div class="workflow">
+        <h2>Our Workflow</h2>
+        <p>At Unlone, we follow a user-centered approach to ensure every individual receives personalized care and guidance. Here's how our platform works:</p>
+        <ol id="list">
+            <li><strong>User Login or Registration</strong>: Users start their journey by logging in or registering with basic personal information such as phone number and email.</li>
+            <li><strong>Mental Health Questionnaire</strong>: A brief, easy-to-answer questionnaire assesses the user's mental health and emotional state.</li>
+            <li><strong>User Segmentation</strong>: Based on the questionnaire responses, users are categorized into three groups:
+                <ul>
+                    <li><strong>OK</strong>: Mild support needed</li>
+                    <li><strong>Mild</strong>: Moderate support and resources</li>
+                    <li><strong>Severe</strong>: High-priority support and professional resources</li>
+                </ul>
+            </li>
+            <li><strong>Resource Recommendation System</strong>: Each group is provided with tailored resources, including reading material, coping strategies, and exercises.</li>
+            <li><strong>AI Mental Health Chatbot</strong>: Users gain access to an empathetic AI chatbot that offers active listening, motivational support, and personalized advice.</li>
+            <li><strong>Professional Support</strong>: For users in the Severe group, additional information about psychiatrists and professional help is provided.</li>
+            <li><strong>Feedback Loop</strong>: Users provide feedback on the resources and support they receive, helping us improve and refine our services continuously.</li>
+        </ol>
+    </div>
+
+    <div class="empowerment">
+        <h2>Empowering Mental Wellness</h2>
+        <p>Unlone is more than just a platform—it's your companion on the journey to emotional resilience and better mental health. Together, let's build a world where no one feels alone.</p>
+    </div>
+    
+</div>
+</section>
+{% endblock %}

@@ -1,12 +1,74 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Unlone</title>
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+    <link rel="icon" href="{% static 'img/logo_top.png' %}">
 </head>
 <body>
-    Home
-    
+    <header>
+        <nav>
+            <div class="logo">
+                <img id="logoimg" src="{% static 'img/logo.jpg' %}" alt="Logo">
+            </div>
+            <ul class="nav-links">
+                <li><a href="{% url 'index' %}">Home</a></li>
+                <li><a href="{% url 'about' %}">About</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#resources">Resources</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="auth-buttons">
+                <button class="login-btn">Login</button>
+                <button class="register-btn">Register</button>
+
+            </div>
+        </nav>
+    </header>
+
+    <section id="hero">
+        <div class="hero-text">
+            <h1>Unlone</h1>
+            <p>Your Mental Wellness Companion</p>
+            <div class="cta-buttons">
+                <button id="btnques">Take the Questionnaire</button>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="features">
+        <h2>Features</h2>
+        <div class="feature-cards">
+            <div class="card">
+                <h3>Assessment</h3>
+                <p>Simple questions to assess your mental health.</p>
+            </div>
+            <div class="card">
+                <h3>Resources</h3>
+                <p>Customized recommendations for every group.</p>
+            </div>
+            <div class="card">
+                <h3>AI Chatbot</h3>
+                <p>Talk to our AI companion for support.</p>
+            </div>
+            <div class="card">
+                <h3>Severe Support</h3>
+                <p>Access psychiatrist information for severe cases.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Unlone. All rights reserved.</p>
+        <div class="socials">
+            <a href="#">Facebook</a>
+            <a href="#">Twitter</a>
+            <a href="#">LinkedIn</a>
+        </div>
+    </footer>
 </body>
 </html>
