@@ -1,11 +1,27 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    Login
-</body>
-</html>
+{% extends 'users/base.html' %}
+
+{% load static %}
+
+{% block title %}Login{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/login.css' %}">
+{% endblock %}
+
+
+{% block content %}
+    <div class="container">
+    <h1 class="text-center">Login</h1>
+    <form class="form-container" action="{% url 'login' %}" method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        {% if request.GET.next %}
+            <input type="hidden" name="next" value="{{ request.GET.next }}" />
+        {% endif %}
+        <button class="btn btn-primary" type="submit">Submit</button>
+    </form>
+    <p class="text-center mt-3">
+        Don't have an account? <a href="{% url 'register' %}">Login here</a>.
+    </p>
+    </div>
+{% endblock %}

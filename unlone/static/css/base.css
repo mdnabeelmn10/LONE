@@ -3,6 +3,7 @@ body {
     margin: 0;
     padding: 0;
     background: #FFF3E0;
+    height: 100%;
 }
 /* Navigation Bar */
 nav {
@@ -93,7 +94,11 @@ nav {
     color: white;
     border: 1px solid #151e11;
 }
+
+
 footer {
+    position: relative;
+    bottom: 0px;
     background-color: #333;
     color: white;
     text-align: center;
@@ -104,4 +109,26 @@ footer .socials a {
     color: white;
     margin: 0 10px;
     text-decoration: none;
+}
+/* Ensure the page takes the full height */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Main container to push footer down */
+main {
+    flex: 1;
+}
+
+/* Footer styles */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 0.9rem;
 }
