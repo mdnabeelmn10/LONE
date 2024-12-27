@@ -34,6 +34,7 @@ label {
     color: #ff7e5f;
     font-weight: bold;
     border: 1px solid white;
+    border-radius: 15px;
 }
 
 .button{
@@ -47,6 +48,8 @@ label {
     background: #ff7e5f;
     color: white;
     border: 1px solid #ff7e5f;
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
 }
 .container {
     max-width: 80%;

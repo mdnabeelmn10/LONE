@@ -63,7 +63,7 @@
         <p>&copy; 2024 Unlone. All rights reserved.</p>
     </footer>
 </body>
-
+{% block extra_js %}{% endblock %}
 <script>
     document.getElementById('loginButton').addEventListener('click', function () {
         window.location.href = "{% url 'login' %}";
