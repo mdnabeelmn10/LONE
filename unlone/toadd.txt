@@ -6,7 +6,7 @@
 
 
 <button onclick="window.location.href='{% url 'login' %}'">Login</button>
-                <button onclick="window.location.href='{% url 'register' %}'" class="register-btn">Register</button>
+<button onclick="window.location.href='{% url 'register' %}'" class="register-btn">Register</button>
 
 
-        <button onclick="window.location.href='{% url 'register' %}'">Join Us and Get Started</button>
+        

@@ -1,0 +1,89 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f4f4f9;
+}
+
+.container {
+    text-align: center;
+    padding: 20px;
+}
+
+h1, h2 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.recommendations {
+    margin-top: 30px;
+}
+
+.slider {
+    position: relative;
+    max-width: 600px;
+    margin: auto;
+}
+
+.slider-wrapper {
+    display: flex;
+    overflow: hidden;
+}
+
+.slide {
+    display: none;
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.slide img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.book-title {
+    font-weight: bold;
+    color: #444;
+    margin-top: 10px;
+}
+
+.book-author {
+    color: #666;
+    font-size: 0.9em;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    color: #333;
+    font-weight: bold;
+    font-size: 18px;
+    border-radius: 0 3px 3px 0;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid #ddd;
+    user-select: none;
+    transform: translateY(-50%);
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: #ddd;
+}

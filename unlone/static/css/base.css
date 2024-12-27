@@ -51,6 +51,7 @@ nav {
     color: #ffe6cc;
 }
 
+
 .auth-buttons {
     display: flex;
     gap: 0.5rem;
@@ -95,6 +96,19 @@ nav {
     border: 1px solid #151e11;
 }
 
+.auth-buttons .logout-btn {
+    background: white;
+    color: rgba(242, 47, 47, 0.674);
+    font-weight: bold;
+    border: 1px solid white;
+}
+
+.auth-buttons .logout-btn:hover {
+    background: rgba(242, 47, 47, 0.674);
+    color: white;
+    border: 1px solid rgb(104, 0, 0);
+}
+
 
 footer {
     position: relative;
@@ -131,4 +145,16 @@ footer {
     text-align: center;
     padding: 10px;
     font-size: 0.9rem;
+}
+
+#welcome {
+    font-size: 1.2rem;
+    text-align: center;
+    font-weight: lighter;
+}
+
+h3{
+    font-size: 1.2rem;
+    text-align: center;
+    font-weight: lighter;
 }

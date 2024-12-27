@@ -1,0 +1,127 @@
+{% extends 'ques/base.html' %}
+
+{% load static %}
+
+{% block title %}Mental Health Questionnaire{% endblock %}
+
+{% block extra_css %}
+<!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> -->
+<link rel="stylesheet" href="{% static 'css/ques.css' %}">
+{% endblock %}
+
+{% block content %}
+
+    <div class="container">
+        <h1 class="mt-5">Mental Health Questionnaire</h1>
+        <form method="POST">
+            {% csrf_token %}
+            
+            <!-- Question 1 -->
+            <div class="form-group">
+                <label for="id_q1">Question 1: How often have you been bothered by feeling down, depressed, or hopeless?</label>
+                {{ form.q1 }}
+            </div>
+
+            <!-- Question 2 -->
+            <div class="form-group">
+                <label for="id_q2">Question 2: How often have you been bothered by little interest or pleasure in doing things?</label>
+                {{ form.q2 }}
+            </div>
+
+            <!-- Question 3 -->
+            <div class="form-group">
+                <label for="id_q3">Question 3: How often have you been bothered by trouble falling or staying asleep, or sleeping too much?</label>
+                {{ form.q3 }}
+            </div>
+
+            <!-- Repeat for other questions... -->
+            
+            <div class="form-group">
+                <label for="id_q4">Question 4: How often have you been bothered by feeling tired or having little energy?</label>
+                {{ form.q4 }}
+            </div>
+
+            <div class="form-group">
+                <label for="id_q5">Question 5: How often have you been bothered by poor appetite or overeating?</label>
+                {{ form.q5 }}
+            </div>
+
+            <div class="form-group">
+                <label for="id_q6">Question 6: How often have you been bothered by feeling bad about yourself — or that you are a failure or have let yourself or your family down?</label>
+                {{ form.q6 }}
+            </div>
+
+            <div class="form-group">
+                <label for="id_q7">Question 7: How often have you been bothered by trouble concentrating on things, such as reading the newspaper or watching television?</label>
+                {{ form.q7 }}
+            </div>
+
+            <div class="form-group">
+                <label for="id_q8">Question 8: How often have you been bothered by moving or speaking so slowly that other people could have noticed? Or the opposite — being so fidgety or restless that you have been moving around a lot more than usual?</label>
+                {{ form.q8 }}
+            </div>
+
+            <div class="form-group">
+                <label for="id_q9">Question 9: How often have you been bothered by thoughts that you would be better off dead, or of hurting yourself in some way?</label>
+                {{ form.q9 }}
+            </div>
+
+            <div class="form-group">
+                <label for="id_q10">Question 10: How often have you been bothered by feeling nervous, anxious, or on edge?</label>
+                {{ form.q10 }}
+            </div>
+
+            <div class="form-group">
+                <label for="id_q11">Question 11: How often have you been bothered by not being able to stop or control worrying?</label>
+                {{ form.q11 }}
+            </div>
+
+            <div class="form-group">
+                <label for="id_q12">Question 12: How often have you been bothered by feeling afraid as if something awful might happen?</label>
+                {{ form.q12 }}
+            </div>
+
+            <div class="form-group">
+                <label for="id_q13">Question 13: How often have you been bothered by the feeling of worry or anxiety interfering with your daily life?</label>
+                {{ form.q13 }}
+            </div>
+
+            <div class="form-group">
+                <label for="id_q14">Question 14: How often have you been bothered by feeling down or having a lack of interest in life or hobbies?</label>
+                {{ form.q14 }}
+            </div>
+
+            <div class="form-group">
+                <label for="id_q15">Question 15: How often have you been bothered by feeling stressed, overwhelmed, or emotionally drained?</label>
+                {{ form.q15 }}
+            </div>
+
+            <div class="form-group">
+                <label for="id_q16">Question 16: How often have you been bothered by feeling hopeless about your future?</label>
+                {{ form.q16 }}
+            </div>
+
+            <div class="form-group">
+                <label for="id_q17">Question 17: How often have you been bothered by your emotional well-being affecting your sleep, work, or relationships?</label>
+                {{ form.q17 }}
+            </div>
+
+            <div class="form-group">
+                <label for="id_q18">Question 18: How often have you been bothered by thinking about your mental health and its impact on your daily life?</label>
+                {{ form.q18 }}
+            </div>
+            <div class="button">
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+            
+        </form>
+    </div>
+
+{% endblock %}
+<!-- {% block extra_js %}
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+{% endblock %} -->
