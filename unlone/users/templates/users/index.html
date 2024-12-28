@@ -15,7 +15,12 @@
             <h1>Unlone</h1>
             <p>Your Mental Wellness Companion</p>
             <div class="cta-buttons">
-                <button id="btnques">Take the Questionnaire</button>
+                {% if user.is_authenticated %}
+                    <button onclick="window.location.href='/questionnaire'">Take the Questionnaire</button>
+                {% else %}
+                <button onclick="window.location.href='/login'">Take the Questionnaire</button>
+                {% endif %}
+                
 
             </div>
         </div>

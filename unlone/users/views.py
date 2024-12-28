@@ -43,3 +43,6 @@ def logout_view(request):
 
 def about(request):
     return render(request,'users/aboutus.html')
+
+def contact(request):  
+    return render(request,'users/contact.html')

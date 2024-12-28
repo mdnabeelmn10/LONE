@@ -21,7 +21,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('users.urls')),
     path('questionnaire/', include('questionnaire.urls')),
-    # path('resources/', include('resources.urls')),
-    # path('chatbot/', include('chatbot.urls')),
-    # path('psychiatrists/', include('psychiatrists.urls')),
+    path('chatbot/', include('chatbot.urls')),
 ]

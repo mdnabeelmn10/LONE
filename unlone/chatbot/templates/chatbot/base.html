@@ -1,0 +1,77 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Unlone{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <link rel="icon" href="{% static 'img/logo_top.png' %}" type="image/x-icon">
+    {% block extra_css %}{% endblock %}
+        
+</head>
+
+<style>
+.auth-buttons .logout-btn {
+    background: white;
+    color: rgba(242, 47, 47, 0.674);
+    font-weight: bold;
+    border: 1px solid white;
+    margin-top: 10px;
+}
+
+.auth-buttons .logout-btn:hover {
+    background: rgba(242, 47, 47, 0.674);
+    color: white;
+    border: 1px solid rgb(104, 0, 0);
+}
+</style>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img id="logoimg" src="{% static 'img/logo.jpg' %}" alt="Logo">
+            </div>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/about/">About</a></li>
+                <li><a href="{% url 'chatbot' %}">ChatBot</a></li>
+                <li><a href="/questionnaire/ok">Resources</a></li>
+                <li><a href="/contact">Contact</a></li>
+            </ul>
+            <div class="auth-buttons">
+                {% if user.is_authenticated %}
+                    <span class="welcome-text"><h3 id="welcome">Welcome, {{ user.username|capfirst }}!</h3></span><br><br>
+                    <form method="post" action="{% url 'logout' %}" class="logout-form">
+                        {% csrf_token %}
+                        <button type="submit" class="logout-btn">Logout</button>
+                    </form>
+                {% else %}
+                    <button id="loginButton" class="login-btn">Login</button>
+                    <button id="registerButton" class="register-btn">Register</button>
+                {% endif %}
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Unlone. All rights reserved.</p>
+    </footer>
+</body>
+{% block extra_js %}{% endblock %}
+<script>
+    document.getElementById('loginButton').addEventListener('click', function () {
+        window.location.href = "{% url 'login' %}";
+    });
+    document.getElementById('registerButton').addEventListener('click', function () {
+        window.location.href = "{% url 'register' %}";
+    });
+</script>
+
+</html>

@@ -9,6 +9,8 @@
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <title>Mental Health Wellness</title>
     <link rel="stylesheet" href="{% static 'css/mid.css' %}">
+    <link rel="icon" href="{% static 'img/logo_top.png' %}" type="image/x-icon">
+
 </head>
 
 <body>
@@ -21,9 +23,9 @@
             <ul class="nav-links">
                 <li><a href="/">Home</a></li>
                 <li><a href="/about/">About</a></li>
-                <li><a href="#features">Features</a></li>
-                <li><a href="#resources">Resources</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="/chatbot/">ChatBot</a></li>
+                <li><a href="/questionnaire/ok">Resources</a></li>
+                <li><a href="/contact">Contact</a></li>
             </ul>
             <div class="auth-buttons">
                 {% if user.is_authenticated %}

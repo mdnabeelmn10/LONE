@@ -40,9 +40,7 @@ INSTALLED_APPS = [
     # my apps
     'users',
     'questionnaire',
-    # 'resources',
-    # 'chatbot',
-    # 'psychiatrists',
+    'chatbot',
 ]
 
 MIDDLEWARE = [
