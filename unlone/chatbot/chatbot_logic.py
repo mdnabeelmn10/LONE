@@ -20,7 +20,7 @@ with open(os.path.join(BASE_DIR, 'mentalhealth.json'), 'r') as file:
 
 words = pickle.load(open(os.path.join(BASE_DIR, 'ChatBot_Model/words.pkl'), 'rb'))
 classes = pickle.load(open(os.path.join(BASE_DIR, 'ChatBot_Model/classes.pkl'), 'rb'))
-model = load_model(os.path.join(BASE_DIR, 'ChatBot_Model/chatbot_model.h5'))
+model = load_model(os.path.join(BASE_DIR, 'ChatBot_Model/chatbot_model.h5'), compile=False)
 
 def clean_up_sentence(sentence):
     sentence_words = nltk.word_tokenize(sentence)

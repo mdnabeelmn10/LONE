@@ -1,0 +1,218 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    height: 100%;
+}
+/* Navigation Bar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: linear-gradient(to right, #ff7e5f, #feb47b); /* Orangish gradient */
+    color: white;
+    width: 95%;
+}
+
+#logoimg{
+    height: 5rem;
+    width: 17rem;
+    object-fit: scale-down;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    
+}
+
+.nav-links li {
+    margin: 0 1rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #ffe6cc;
+}
+
+.auth-buttons {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.auth-buttons button {
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.auth-buttons button:hover {
+    opacity: 0.9;
+}
+
+.auth-buttons .register-btn {
+    background: white;
+    color: #ff7e5f;
+    font-weight: bold;
+    border: 1px solid white;
+}
+
+.auth-buttons .register-btn:hover {
+    background: #ff7e5f;
+    color: white;
+    border: 1px solid #ff7e5f;
+}
+
+.auth-buttons .login-btn {
+    background: white;
+    color: #151e11;
+    font-weight: bold;
+    border: 1px solid white;
+}
+
+.auth-buttons .login-btn:hover {
+    background: #151e11;
+    color: white;
+    border: 1px solid #151e11;
+}
+
+
+
+/* General Styles */
+
+header {
+    background-color: #FF7E5F;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+header .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+header ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    margin: 0;
+}
+
+header a {
+    color: white;
+    text-decoration: none;
+}
+
+#hero {
+    background: linear-gradient(to bottom right, #FF7E5F, #FEB47B);
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+#hero h1 {
+    font-size: 48px;
+    margin: 0;
+}
+
+#hero p {
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+#hero .cta-buttons button {
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #333;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 1.2rem;
+}
+
+#features {
+    padding: 50px 20px;
+    text-align: center;
+    background: #FFF3E0;
+}
+
+#features h2 {
+    margin-bottom: 30px;
+}
+
+.feature-cards {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.card {
+    background: white;
+    border: 1px solid #FF7E5F;
+    border-radius: 10px;
+    padding: 20px;
+    width: 200px;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer .socials a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+}
+#btnques {
+    background: white;
+    color: #ff7e5f;
+    font-weight: bold;
+    border: 1px solid white;
+}
+
+#btnques:hover {
+    background: #ff7e5f;
+    color: white;
+    border: 1px solid #ff7e5f;
+}
+
+#btnres {
+    background: white;
+    color: #151e11;
+    font-weight: bold;
+    border: 1px solid white;
+}
+
+#btnres:hover {
+    background: #151e11;
+    color: white;
+    border: 1px solid #151e11;
+}
