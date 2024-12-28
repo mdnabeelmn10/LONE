@@ -37,8 +37,8 @@ if ENVIRONMENT == 'production':
 else:
     DEBUG = True
 
-ALLOWED_HOSTS = ['*']
-
+ALLOWED_HOSTS = ['unlone.onrender.com']
+CSRF_TRUSTED_ORIGINS = ['https://unlone.onrender.com']
 
 # Application definition
 
