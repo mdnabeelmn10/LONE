@@ -9,29 +9,67 @@
 {% endblock %}
 
 {% block content %}
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <h1>Chatbot</h1>
-                <div class="chatbot-container">
-                    <div class="chatbot-header">
-                        <h2>Chatbot</h2>
-                    </div>
-                    <div class="chatbot-body">
-                        <div class="chatbot-messages">
-                            <div class="chatbot-message">
-                                <div class="chatbot-message-content">
-                                    <p>Hello! I am a chatbot. How can I help you?</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="chatbot-input">
-                            <input type="text" class="chatbot-input-field" placeholder="Type your message here...">
-                            <button class="chatbot-send-button">Send</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+<div class="box">
+
+<div class="chat-container">
+    <div class="chat-header">
+        Unlone Chatbot
     </div>
+    <div class="chat-body" id="chatBody">
+        <!-- Messages will appear here -->
+    </div>
+    <div class="chat-footer">
+        <form onsubmit="event.preventDefault(); sendMessage();">
+            {% csrf_token %}
+            <input type="text" id="messageInput" placeholder="Type a message..." autocomplete="off" />
+            <button type="submit">Send</button>
+        </form>
+    </div>
+</div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+    async function sendMessage() {
+        const messageInput = document.getElementById('messageInput');
+        const chatBody = document.getElementById('chatBody');
+        const userMessage = messageInput.value;
+
+        if (!userMessage.trim()) {
+            return;
+        }
+
+        // Add user message to chat
+        const userMessageElement = document.createElement('div');
+        userMessageElement.className = 'message user';
+        userMessageElement.innerHTML = `<div class="text">${userMessage}</div>`;
+        chatBody.appendChild(userMessageElement);
+        chatBody.scrollTop = chatBody.scrollHeight;
+
+        // Send message to API
+        const csrfToken = document.querySelector('[name=csrfmiddlewaretoken]').value;
+        const response = await fetch('/chatbot/', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'X-CSRFToken': csrfToken
+            },
+            body: JSON.stringify({ message: userMessage })
+        });
+
+        const data = await response.json();
+        const botResponse = data.response || data.error;
+
+        // Add bot response to chat
+        const botMessageElement = document.createElement('div');
+        botMessageElement.className = 'message bot';
+        botMessageElement.innerHTML = `<div class="text">${botResponse}</div>`;
+        chatBody.appendChild(botMessageElement);
+        chatBody.scrollTop = chatBody.scrollHeight;
+
+        // Clear input field
+        messageInput.value = '';
+    }
+</script>
 {% endblock %}
