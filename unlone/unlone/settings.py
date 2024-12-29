@@ -29,7 +29,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = env('SECRET_KEY')
 
-ENVIRONMENT = "production"
+ENVIRONMENT = env('ENVIRONMENT', default='production')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 if ENVIRONMENT == 'production':
@@ -37,7 +37,7 @@ if ENVIRONMENT == 'production':
 else:
     DEBUG = True
 
-ALLOWED_HOSTS = ['unlone.onrender.com']
+ALLOWED_HOSTS = ['unlone.onrender.com','localhost','127.0.0.1']
 CSRF_TRUSTED_ORIGINS = ['https://unlone.onrender.com']
 
 # Application definition
@@ -90,7 +90,7 @@ WSGI_APPLICATION = 'unlone.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
-if ENVIRONMENT == 'deployment':
+if ENVIRONMENT == 'development':
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.sqlite3',
