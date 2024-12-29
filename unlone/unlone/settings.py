@@ -66,7 +66,16 @@ MIDDLEWARE = [
     'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
+INSTALLED_APPS += ['corsheaders']
+MIDDLEWARE += ['corsheaders.middleware.CorsMiddleware']
+CORS_ALLOW_ALL_ORIGINS = True
+
 ROOT_URLCONF = 'unlone.urls'
+
+CORS_ALLOWED_ORIGINS = [
+    'https://unlone.onrender.com',
+]
+
 
 TEMPLATES = [
     {
